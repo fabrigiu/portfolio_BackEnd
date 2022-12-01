@@ -2,10 +2,9 @@ package com.myportfolio.fsg;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration;
 
-@SpringBootApplication
-@ComponentScan("com.myportfolio.fsg.Controller")
+@SpringBootApplication(exclude = {ErrorMvcAutoConfiguration.class})
 public class FsgApplication {
 
 	public static void main(String[] args) {
